@@ -1,4 +1,3 @@
-*A PRD (Product Requirements Document) is created before creating a product or feature and includes the planning required for developers to execute effectively. This document is usually prepared by Product Managers, read more [here](https://www.atlassian.com/agile/product-management/requirements)*
 
 # Product Requirements Documentation
 
@@ -28,9 +27,13 @@ List of stories users should experience when using your application.
 
 For backend Applications you'll want to detail the different routes and types of your request your server can receive. There are three main things to define.
 
+![json](json.png "Data breakdown")
+
 - The endpoint: [the URL to which the request must be made](https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=JPY&apikey=demo)
+
 - The method: the type of http method the request should be
 - The response: json data
+
 
 You should also include any additional notes on any special headers that may be used and so forth.
 
@@ -57,5 +60,5 @@ flowchart LR
 
 ## User Interface Mockups
 
-![Alt text](layout.png "Layout")
+![layout](layout.png "Layout")
 
