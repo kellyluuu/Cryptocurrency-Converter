@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Converter</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+      <script src="./js/script.js" defer></script>
+      <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header><h1>Cryptocurrency Converter<h1></h1></header>
+    <div class="container">
+        <div id="one">
+            <input type="type" id="from-currency" value="BTC"/>
+            <button id="convert-button">Convert</button>
+            <input id="to-currency" type="type"  value="USD"/>
+        </div>
+        <div id="two">
+            <p><span id="from-value"></span>
+            <b><span id="exchange-value"></span></b><span id="to-value"> </span>
+            </p>
+        </div>
+        <div id="three">
+            <button id="save">Save Conversion</button>
+        </div>
+    </div>
+    <div id="history">
+
+    </div>
+</body>
+</html>
+
