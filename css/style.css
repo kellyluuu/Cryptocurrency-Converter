@@ -29,11 +29,14 @@ justify-content: center;
 }
 
 .delete{
-    border: whitesmoke 0px;
+    border: rgb(233, 231, 231) 0px;
     font-size: small;
     color:rgb(247, 168, 132);
     padding-bottom: 5px;
-    border-radius: 10px;
+    border-radius: 50px;
+}
+#convert-button{
+    max-width: 200px ;
 }
 h5{
     margin-bottom: -5px;
