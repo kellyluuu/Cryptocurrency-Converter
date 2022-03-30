@@ -1,8 +1,16 @@
 
 .container-b{
     background-color: rgb(238, 239, 240);
+    border-radius: 10px;
+    
 }
 
+#one2 {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    
+}
 
 ul {
     grid-template-columns: 30% 30% 30%;
@@ -12,9 +20,50 @@ ul {
 li {
     list-style: none;
     text-align: center;
+    background-color: whitesmoke ;
+    border-radius: 10px;
 } 
 
+.card-group{
+justify-content: center;
+}
+
+.delete{
+    border: whitesmoke 0px;
+    font-size: small;
+    color:rgb(247, 168, 132);
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
 h5{
     margin-bottom: -5px;
+}
+
+#to-value{
+    font-size: medium;
+}
+
+#convert-button{
+    font-weight: bolder;
+}
+
+h3{
+    font-size: xx-large;
+}
+
+h4{
+    text-align: center;
+
+}
+
+.card-title{
+    font-size:medium;
+}
+.card-header {
+    border-radius: 10px;
+}
+
+#history{
+    padding: 10px;
 }
 
