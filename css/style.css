@@ -61,6 +61,7 @@ h4{
 
 .card-title{
     font-size:medium;
+    text-align: left;
 }
 .card-header {
     border-radius: 10px;
@@ -70,3 +71,6 @@ h4{
     padding: 10px;
 }
 
+#time{
+    text-align: center;
+}

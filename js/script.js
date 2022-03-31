@@ -14,6 +14,7 @@ const matchLista = document.getElementById("match-list-a")
 const matchListb = document.getElementById("match-list-b")
 const code = document.querySelector("text-primary")
 const tosearch = document.getElementById("to-currency")
+const $time = $('#time')
 
 const history = JSON.parse(localStorage.getItem("history")) || []
 
@@ -154,5 +155,12 @@ const addHistory = (from,to)=>{
     to,
     })
   }
+
 $three.hide()
 loadList()
+
+
+const date = new Date();
+const n = date.toDateString();
+const time = date.toLocaleTimeString();
+$time.text(`Exchange rate as of ${n} - ${time}`)
