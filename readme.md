@@ -20,10 +20,6 @@
 
 ## Problem Being Solved and Target Market
 calculate the value of any crypto and physical currency. User can create a favorit list of currency they are interested in. 
-
-## User Stories
-List of stories users should experience when using your application.
-
 - User will see their saved list when laoding the page 
 - Seach box will auto fill for them to click on the correct currency 
 - Users can create a saved list and go back to it with local storage
