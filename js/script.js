@@ -16,29 +16,6 @@ const code = document.querySelector("text-primary")
 const tosearch = document.getElementById("to-currency")
 const $time = $('#time')
 
-const history = JSON.parse(localStorage.getItem("history")) || []
-
-const loadList = ()=>{
-  history.forEach((element,index)=>{
-      const historyId = index;
-      $.ajax(`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${element.from}&to_currency=${element.to}&apikey=${API}`)
-      .then ((data)=>{
-        const $li = $(`<li id="${historyId}" data-array="${historyId}" class="card-group">`)
-        $li.html(`<button id=${historyId} class="delete" onclick="remove($('#${historyId}'))"> X </button>
-        <div class="card-header">${data["Realtime Currency Exchange Rate"]["1. From_Currency Code"]}</div> <div class="card-body"><h4 class="card-title">
-        ${data["Realtime Currency Exchange Rate"]["2. From_Currency Name"]}</h4>
-        <p class="card-text">${data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]} <br>
-        ${data["Realtime Currency Exchange Rate"]["3. To_Currency Code"]}</p>`)
-        $history.append($li)
-      }).catch(()=>{
-        const $li = $(`<li id="${historyId}" data-array="${historyId}" class="card-group">`)
-        $li.html(`<div class="card-header">Error</div> <div class="card-body"><h4 class="card-title"></h4>
-        <p class="card-text">Loading Error<br>Try Again Later</p>`)
-        $history.append($li)
-    })
-    })}
-
-
 
 const filterDataA = async searchText => {
     const res = await fetch ("./js/currency_list.json")
@@ -66,7 +43,6 @@ const filterDataB = async searchText => {
   }
   outputHtmlB (matches);
 }
-
 
 const outputHtmlA = matches => {
     if(matches.length>0){
@@ -100,7 +76,28 @@ matchListb.addEventListener('click', (event)=>{
   matches = [];
   matchListb.innerHTML = ""
 })
-    
+
+const history = JSON.parse(localStorage.getItem("history")) || []
+
+const loadList = ()=>{
+  history.forEach((element,index)=>{
+      const historyId = index;
+      $.ajax(`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${element.from}&to_currency=${element.to}&apikey=${API}`)
+      .then ((data)=>{
+        const $li = $(`<li id="${historyId}" data-array="${historyId}" class="card-group">`)
+        $li.html(`<button id=${historyId} class="delete" onclick="remove($('#${historyId}'))"> X </button>
+        <div class="card-header">${data["Realtime Currency Exchange Rate"]["1. From_Currency Code"]}</div> <div class="card-body"><h4 class="card-title">
+        ${data["Realtime Currency Exchange Rate"]["2. From_Currency Name"]}</h4>
+        <p class="card-text">${data["Realtime Currency Exchange Rate"]["5. Exchange Rate"]} <br>
+        ${data["Realtime Currency Exchange Rate"]["3. To_Currency Code"]}</p>`)
+        $history.append($li)
+      }).catch(()=>{
+        const $li = $(`<li id="${historyId}" data-array="${historyId}" class="card-group">`)
+        $li.html(`<div class="card-header">Error</div> <div class="card-body"><h4 class="card-title"></h4>
+        <p class="card-text">Loading Error<br>Try Again Later</p>`)
+        $history.append($li)
+    })
+    })}   
 
 $fromSearch.on("keyup",(event) =>{
   if (event.keyCode === 13) {
@@ -158,7 +155,6 @@ const addHistory = (from,to)=>{
 
 $three.hide()
 loadList()
-
 
 const date = new Date();
 const n = date.toDateString();
