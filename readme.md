@@ -24,7 +24,10 @@ List of stories users should experience when using your application.
 - Users should be able to see the site on desktop and mobile
 
 ## User Interface Mockups
-![layout](docs/layout.png "Layout")
-
 ![layout](docs/Screen_Shot.png "Layout2")
+
+## future features
+- choose a different api that have less issue with connecting 
+- Add icon
+- Less code
 
