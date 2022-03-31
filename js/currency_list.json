@@ -85,8 +85,8 @@
       "name": "Colombian Peso"
     },
     {
-      "currency code": "JPY",
-      "currency name": "Japanese Yen"
+      "code": "JPY",
+      "name": "Japanese Yen"
     },
     {
       "code": "CUP",
